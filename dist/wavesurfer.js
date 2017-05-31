@@ -1486,7 +1486,6 @@ WaveSurfer.util.extend(WaveSurfer.MediaElement, {
         this.seekTo(start);
         this.media.play();
         end && this.setPlayEnd(end);
-        this.fireEvent('play');
     },
 
     /**
@@ -1495,7 +1494,6 @@ WaveSurfer.util.extend(WaveSurfer.MediaElement, {
     pause: function () {
         this.media && this.media.pause();
         this.clearPlayEnd();
-        this.fireEvent('pause');
     },
 
     setPlayEnd: function (end) {
